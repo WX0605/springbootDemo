@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.torres.demo.mapper.StudentMapper">
+    <insert id="addUser" parameterType="com.torres.demo.command.UserCommand">
+        insert into user (id,name)
+        values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR})
+    </insert>
+
+
+    <insert id="addBook" parameterType="com.torres.demo.command.BookCommand">
+        insert into book (id,name)
+        values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR})
+    </insert>
+</mapper>
